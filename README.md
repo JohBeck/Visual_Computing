@@ -2,7 +2,7 @@
 
 copy to local machine:
 
-git clone https://github.com/JohBeck/Robot_Learning.git
+git clone https://github.com/JohBeck/Visual_Computing.git
 
 get the new stuff from the others...
 
