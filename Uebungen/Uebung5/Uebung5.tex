@@ -1,5 +1,7 @@
 \documentclass[accentcolor=tud1a,colorbacktitle,inverttitle,landscape,german,presentation,t]{tudbeamer}
 \usepackage{ngerman}
+\usepackage{subcaption}
+\usepackage{graphicx}
 
 \begin{document}
 
@@ -7,6 +9,7 @@
 \subtitle{Visual Computing - Bilder}
 
 \author[Johannes Beck, Christian Eilers, Robin Menzenbach, Martin Steinborn]{Johannes Beck, Christian Eilers, Robin Menzenbach, Martin Steinborn}
+
 %\institute[IFP TUD]{Institut f"ur Festk"orperphysik, TU Darmstadt}
 
 %\logo{\includegraphics{TUDbeamer-logo}}
@@ -84,6 +87,48 @@
 \section{Aufgabe 4}
 	\begin{frame}[t]
 		\frametitle{Aufgabe 4: Histogrammausgleich}
-		%TODO 4
+		\begin{figure}
+		\centering
+		\begin{minipage}[c]{.2\textwidth}
+			\centering
+			$\begin{bmatrix}
+			6& 48& 94& 33& 7\\
+			12& 36& 26& 71& 91\\
+			29& 17& 34& 45& 67\\
+			34& 55& 74& 1& 41\\
+			87& 14& 28& 61& 32
+			\end{bmatrix}$
+		\end{minipage}
+		\begin{minipage}[c]{.2\textwidth}
+			\centering
+			$\huge \Rightarrow$
+		\end{minipage}
+		\begin{minipage}[c]{.3\textwidth}
+			\centering
+			$\includegraphics[width=\textwidth]{fig/image.pdf}$
+		\end{minipage}
+
+		
+		\end{figure}
+
+		
+	\end{frame}
+	\begin{frame}[t]
+		\frametitle{Aufgabe 4: Histogrammausgleich}
+		\begin{figure}	
+			\centering
+			\begin{subfigure}[t]{.45\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{fig/histogram.pdf}
+				\caption{Histogramm}\label{fig:1a}		
+			\end{subfigure}
+			\quad
+			\begin{subfigure}[t]{.45\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{fig/s-curve.pdf}
+				\caption{S-Kurve}\label{fig:1b}
+			\end{subfigure}
+			\caption{Plots}\label{fig:1}
+		\end{figure}
 	\end{frame}
 \end{document}
