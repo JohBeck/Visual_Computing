@@ -94,17 +94,139 @@ zeigt deutlich, wie nur eine bestimtme Bandbreite an Frequenzen passieren kann u
 \section{Aufgabe 3}
 	\begin{frame}
 		\frametitle{Aufgabe 3: Digitale Kamera \\ a)}
-		%TODO 3a)
+		
+		Einsetzen der gegebenen Werte in die Gleichung liefert:
+		\begin{align*}
+		\begin{bmatrix}
+		-20 \\
+		0 \\
+		10 \\
+		\end{bmatrix}
+		&=
+		\begin{bmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 1 \\
+		\end{bmatrix}
+		\begin{bmatrix}
+		0  & 0 & 1 \\
+		0  & 1 & 0 \\
+		-1 & 0 & 0 \\
+		\end{bmatrix}
+		\begin{bmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 1 \\
+		\end{bmatrix}
+		\left(
+		\vec{a} - 
+		\begin{bmatrix}
+		30 \\
+		40 \\
+		10 \\
+		\end{bmatrix}
+		\right)
+		\\
+		&=
+		\begin{bmatrix}
+		0  & 0 & 1 \\
+		0  & 1 & 0 \\
+		-1 & 0 & 0 \\
+		\end{bmatrix}
+		\vec{a}
+		-
+		\begin{bmatrix}
+		10  \\
+		40  \\
+		-30 \\
+		\end{bmatrix}
+		\end{align*}
+		
+		
+		
+		\begin{align*}
+		\begin{bmatrix}
+		-10 \\
+		40  \\
+		-20 \\
+		\end{bmatrix}
+		&=
+		\begin{bmatrix}
+		0  & 0 & 1 \\
+		0  & 1 & 0 \\
+		-1 & 0 & 0 \\
+		\end{bmatrix}
+		\vec{a}
+		\end{align*}		
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Aufgabe 3: Digitale Kamera \\ a)}
+		
+		L\"osen des linearen Gleichungssystems liefert:
+		\begin{align*}
+		\vec{a} &=
+		\begin{bmatrix}
+		20 \\
+		40  \\
+		-10 \\
+		\end{bmatrix}
+		\end{align*}
+		
 	\end{frame}
 	
 	\begin{frame}
 		\frametitle{Aufgabe 3: Digitale Kamera \\ b)}
-		%TODO 3b)
+		
+		Koordinaten der abgebildeten Punkte:
+		
+		\begin{align*}
+			P1' &=
+			\begin{bmatrix}
+			78 \\
+			2  \\
+			0 \\
+			\end{bmatrix}
+		\end{align*}
+		\begin{align*}
+		P2' &=
+		\begin{bmatrix}
+		40 \\
+		52,5  \\
+		0 \\
+		\end{bmatrix}
+		\end{align*}
+		\begin{align*}
+		P3' &=
+		\begin{bmatrix}
+		-6 \\
+		122  \\
+		0 \\
+		\end{bmatrix}
+		\end{align*}
 	\end{frame}
 	
 	\begin{frame}
 		\frametitle{Aufgabe 3: Digitale Kamera \\ c)}
-		%TODO 3c)
+		
+		Pixelkoordinaten f\"ur die berechneten Punkte P':
+		
+		\begin{align*}
+		N1 &=
+		\begin{bmatrix}
+		99 \\
+		3  \\
+		\end{bmatrix}
+		\end{align*}
+		\begin{align*}
+		N2 &=
+		\begin{bmatrix}
+		51 \\
+		67  \\
+		\end{bmatrix}
+		\end{align*}
+		Der Punkt P3' wird nicht auf einem der Pixel abgebildet, da er nicht von der Kamera aufgefangen wird. Die Kamera f\"angt nur Punke auf der Fl\"ache (0,0) bis (100,100) auf.
+		
 	\end{frame}
 \section{Aufgabe 4}
 	\begin{frame}[t]
