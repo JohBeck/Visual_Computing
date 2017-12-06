@@ -8,6 +8,7 @@
 \usepackage[ngerman,english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{colortbl}
+\usepackage{adjustbox}
 
 \begin{document}
 
@@ -70,5 +71,67 @@ In der Virtual Reality ist die virtuelle Welt das Ziel des Nutzers. Er möchte d
 \section{Aufgabe 4}
 	\begin{frame}
 		\frametitle{Aufgabe 4: Rasterisierung} 
+		Die Anwendung des Bresenham-Algorithmusliefert die Werte
+		\begin{tabular}{c*{4}{|c}}%>{\tiny}
+			\textbf{i} & \textbf{Fehler} & $\textbf{x}_{i}$ & $\textbf{y}_{i}$ & \textbf{neuer\_Fehler} \\
+			\hline
+			0 & 3.5 & 2 & 2 & 3.5\\
+			1 & 3.5 - 4 = -0.5 & 3 & 3 & -0.5 + 7 = 6.5\\
+			2 & 6.5 - 4 = 2.5 & 4 & 3 & 2.5\\
+			3 & 2.5 - 4 = -1.5 & 5 & 4 & -1.5 + 7 = 5.5\\
+			4 & 5.5 - 4 = 1.5 & 6 & 4 & 1.5\\
+			5 & 1.5 - 4 = -2.5 & 7 & 5 & -2.5 + 7 = 4.5\\
+			6 & 4.5 - 4 = 0.5 & 8 & 5 & 0.5\\
+			7 & 0.5 - 4 = -3.5 & 9 & 6 & -3.5 + 7 = 3.5\\
+			\hline 
+		\end{tabular}. 
+	$\vec{x}_{Start} =
+	\begin{bmatrix}
+	2 \\ 2
+	\end{bmatrix}
+	 $ und
+	 $\vec{x}_{Ziel} =
+	 \begin{bmatrix}
+	 9 \\ 6
+	 \end{bmatrix}
+	 $.\\
+	{\tiny 
+		Mit	$dx=x_{end} - x_{start}$, 
+		$dy=y_{end} - y_{start}$ folgt für  $1\leq i \leq x_{end}$ gilt \\		 
+		$Fehler_{i}=neuer\_Fehler_{i-1} - dy$, 
+		$neuer\_Fehler_{i}=
+		\begin{cases}
+		Fehler_{i}+dx & \text{,wenn }Fehler_{i} < 0 \\
+		Fehler_{i} & \text{,sonst}
+		\end{cases}$,\\
+		$x_{i}=x_{i-1}$ und 
+		$y_{i} = 
+		\begin{cases}
+		y_{i-1}+1 & \text{,wenn }Fehler_{i} < 0 \\
+		y_{i-1} & \text{,sonst}
+		\end{cases}$.\\
+		Sowie für $i=0$ gelten die Startwerte, sowie $Fehler_{0}=0.5 \cdot dx$.}
+	\end{frame}
+	\begin{frame}
+	\frametitle{Aufgabe 4: Rasterisierung} 
+	damit folgt für die Grafik \\
+	\centering
+	\begin{tabular}{|*{10}{c|}}
+		\hline
+		& & & & & & & & & \\ %y=7
+		\hline
+		& & & & & & & & \cellcolor{black} & \\ %y=6
+		\hline
+		& & & & & & \cellcolor{black} & \cellcolor{black} & & \\ %y=5
+		\hline
+		& & & & \cellcolor{black} & \cellcolor{black} & & & & \\ %y=4
+		\hline
+		& & \cellcolor{black} & \cellcolor{black} & & & & & & \\ %y=3
+		\hline
+		& \cellcolor{black} & & & & & & & & \\ %y=2
+		\hline
+		& & & & & & & & & \\ %y=1
+		\hline
+	\end{tabular}
 	\end{frame}
 \end{document}
