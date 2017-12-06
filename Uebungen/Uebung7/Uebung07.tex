@@ -1,0 +1,68 @@
+\documentclass[accentcolor=tud9c,colorbacktitle,inverttitle,landscape,german,presentation,t]{tudbeamer}
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage{subfigure}
+\usepackage[ngerman,english]{babel}
+\usepackage[utf8]{inputenc}
+
+
+\begin{document}
+
+\title{\"Ubung 7}
+\subtitle{Visual Computing - Grafikpipeline \& Eingabemodalit\"aten \& VR+AR} %TODO
+
+\author[Johannes Beck, Christian Eilers, Robin Menzenbach, Martin Steinborn]{Johannes Beck, Christian Eilers, Robin Menzenbach, Martin Steinborn}
+
+
+\date{\today}
+
+\begin{titleframe}
+\end{titleframe}
+
+\section{Aufgabe 1}
+	\begin{frame}
+		\frametitle{Aufgabe 1: Allgemeine Fragen}
+		\begin{itemize}
+		\item[a)]In der Augmented Reality soll die Wahrnehmung des Nutzers verbessert und vergrößert werden. So werden hier zusätzliche Informationen bereitgestellt, wie die Geschwindigkeit in einem Head-up Display oder anstehende Termine am Rand des Sichtfeldes.\\
+In der Virtual Reality ist die virtuelle Welt das Ziel des Nutzers. Er möchte damit interagieren, und wenn möglich sollte er nicht bemerken sich in einer virtuellen Welt zu befinden.
+		\item[b)]In der Computer Vision geht es darum, gegenstände in Bilder zu erkennen, in der Computergrafik möchte man gegenstände erzeugen. Im Endeffekt kann vision als umgekehrte Grafik betrachtet werden.
+		\item[c)] 3D Objekte werden am Computer durch Polygon Netze mit Material, Beleuchtung in verschiedenen Szenen dargestellt.
+		\end{itemize}
+	\end{frame}
+
+
+	\begin{frame}
+		\frametitle{Aufgabe 1: Allgemeine Fragen}
+		\begin{itemize}
+		\item[d)]
+		\begin{itemize}
+			 \item[-] \textbf{Flat Shading}: Aufteilung in Primitive. Die orientierung normale des Primitives ergibt dann die Helligkeit.
+			 \item[-] \textbf{Gouraud Shading}: Aufteilung in Primitive. Helligkeit wird über die Eckpunkte Normale berechnet und diese Werte entlang der Kanten des Primitives linear interpoliert.
+			 \item[-] \textbf{Phong Shading}: Wie Gouraud Shading, nur wird die Helligkeit auch auf den Flächen der Primitive interpoliert.
+		\end{itemize}
+		\item[e)]  Hüllkörper umfassen Primitive, um Schnitt- oder Kollisionstests mit anderen Primitiven zu vereinfachen. Um dies zu gewährleisten, sollten Hüllkörper so einfach wie möglich aufgebaut sein, also Kugeln oder Bounding Boxes. Im 3-dimensionalen werden dann Kugeln oder Würfel verwendet.
+		\end{itemize}
+	\end{frame}
+
+\section{Aufgabe 2}
+	\begin{frame}
+		\frametitle{Aufgabe 2: Geometrieverarbeitung} %TODO
+		\begin{itemize}
+		\item[a)] Zuerst wird das Sichtvolumen mithilfe der Model-Transformation an das Koordinatensystem angepasst. Danach werden die Texturen mit dem Painter's-Algorithmus gezeichnet. Dieser zeichnet die am weitesten entfernten Objekte zuerst. Da in unserem Beispiel alle Objekte nur einen z-Wert haben, kann ein Objekt nach dem anderen gezeichnet werden. -> Himmel -> Gras -> Sonne -> Haus -> Auto
+		\item[b)]
+		\end{itemize}
+	\end{frame}
+	
+\section{Aufgabe 3}
+	\begin{frame}
+		\frametitle{Aufgabe 3: B\"aume \\ a)} %TODO
+	\end{frame}
+	
+\section{Aufgabe 4}
+	\begin{frame}
+		\frametitle{Aufgabe 4: Rasterisierung \\ a)} %TODO
+	\end{frame}
+\end{document}
