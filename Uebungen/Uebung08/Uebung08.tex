@@ -56,9 +56,9 @@
 	0 & 0 & 0 & 1
 	\end{bmatrix} $, 
 	$T_{Rotation}=\begin{bmatrix}
-	0.90 & -0.19 & -0.19 & 0\\
-	0.39 & 0.76 & 0.63 & 0\\
-	-0.19 & -0.53 & 0.76 & 0\\
+	0.90 & -0.19 & 0.39 & 0\\
+	0.39 & 0.76 & -0.53 & 0\\
+	-0.19 & 0.63 & 0.76 & 0\\
 	0 & 0 & 0 & 1
 	\end{bmatrix} $, 
 	$T_{Skalierung}=\begin{bmatrix}
@@ -91,16 +91,16 @@
 	 &  &  & \\
 	 &  &  & 
 	\end{bmatrix}$\\
-	Damit ergeben sich die Positionen des Würfels zu\\
+	Damit ergeben sich die Positionen $p_i'=T_{ges} \cdot p_i $ des Würfels zu\\
 	{\small 
-	$p_1=T_{ges} \cdot \begin{bmatrix} 0\\0\\0\end{bmatrix}= $,
-	$p_2=T_{ges} \cdot \begin{bmatrix} 1\\0\\0\end{bmatrix}= $,
-	$p_3=T_{ges} \cdot \begin{bmatrix} 1\\1\\0\end{bmatrix}= $,
-	$p_4=T_{ges} \cdot \begin{bmatrix} 0\\1\\0\end{bmatrix}= $,\\
-	$p_5=T_{ges} \cdot \begin{bmatrix} 0\\0\\1\end{bmatrix}= $,
-	$p_6=T_{ges} \cdot \begin{bmatrix} 1\\0\\1\end{bmatrix}= $,
-	$p_7=T_{ges} \cdot \begin{bmatrix} 1\\1\\1\end{bmatrix}= $,
-	$p_8=T_{ges} \cdot \begin{bmatrix} 0\\1\\1\end{bmatrix}= $.
+	$p_1'=\begin{bmatrix}  -0.38\\1.51 \\1.25 \end{bmatrix}$, % T_{ges} \cdot \begin{bmatrix} 0\\0\\0\end{bmatrix}= 
+	$p_2'=\begin{bmatrix}  -0.57\\2.27 \\1.88 \end{bmatrix}$, %T_{ges} \cdot \begin{bmatrix} 1\\0\\0\end{bmatrix}= 
+	$p_3'=\begin{bmatrix}  -1.34\\5.29 \\4.38 \end{bmatrix}$, %T_{ges} \cdot \begin{bmatrix} 1\\1\\0\end{bmatrix}= 
+	$p_4'=\begin{bmatrix}  -1.15\\4.54 \\3.76 \end{bmatrix}$,\\ %T_{ges} \cdot \begin{bmatrix} 0\\1\\0\end{bmatrix}= 
+	$p_5'=\begin{bmatrix}  1.13\\0.50 \\3.74 \end{bmatrix}$, %T_{ges} \cdot \begin{bmatrix} 0\\0\\1\end{bmatrix}= 
+	$p_6'=\begin{bmatrix}  0.94\\1.25 \\4.36 \end{bmatrix}$, %T_{ges} \cdot \begin{bmatrix} 1\\0\\1\end{bmatrix}= 
+	$p_7'=\begin{bmatrix}  0.18\\4.28 \\6.87 \end{bmatrix}$, %T_{ges} \cdot \begin{bmatrix} 1\\1\\1\end{bmatrix}= 
+	$p_8'=\begin{bmatrix}  0.37\\3.52 \\6.24 \end{bmatrix}$. %T_{ges} \cdot \begin{bmatrix} 0\\1\\1\end{bmatrix}= 
 }
 	
 \end{frame}
