@@ -4,17 +4,13 @@ T_T=[ 1 0 0 0;
 	    0 1 0 2;
 	    0 0 1 0;
 	    0 0 0 1];    
-        
-T_Rot_alt=[0.90 -0.19 -0.19 0;
-	0.39 0.76 0.63 0;
-	-0.19 -0.53 0.76 0;
-	0 0 0 1];
- 
+%Werte Christian mit Wiki-Formel
 T_Rot_values=[0.84 -0.19 0.151 0;
   0.50 0.60 -0.62 0; 
   -0.19 0.78 0.60 0;
   0 0 0 1];
-  
+ 
+%Wiki-Formel 
   n=[1 0.5 0.5];
   n=n/norm(n);
   a=pi/4;
@@ -34,22 +30,21 @@ T_Scher=[1 0 0.5 0;
 	2 0 1 0;
 	0 0 0 1];
   
-%Bisher nur Platzhalter
 T_Proj=[0 0 0 0;
   0 0 0 0;
   0 0 1 0;
   0.5 2 0 1];
   
- T_ges_scherTrans=T_Rot*T_Scale*T_Scher'*T_T*T_Proj
- T_ges_=T_Rot*T_Scale*T_Scher*T_T*T_Proj;
+Cube = [0 1 1 0 0 1 1 0;
+        0 0 1 1 0 0 1 1;
+        0 0 0 0 1 1 1 1;
+        1 1 1 1 1 1 1 1]
 
- 
- Res_scherTrans = T_ges_scherTrans * [0 1 1 0 0 1 1 0;
-          0 0 1 1 0 0 1 1;
-          0 0 0 0 1 1 1 1;
-          1 1 1 1 1 1 1 1]
+%Transponiert ist Christians Werte
+ T_ges_Christian=T_Rot*T_Scale*T_Scher'*T_T*T_Proj;
+ T_ges_Johannes=T_Rot*T_Scale*T_Scher*T_T*T_Proj;
+
+ %Spalten sind die Eckpunkte des Würfels
+ Res_Christian = T_ges_Christian * Cube
           
- Res_scherNoTrans = T_ges * [0 1 1 0 0 1 1 0;
-          0 0 1 1 0 0 1 1;
-          0 0 0 0 1 1 1 1;
-          1 1 1 1 1 1 1 1]
+ Res_Johannes = T_ges_Johannes * Cube
