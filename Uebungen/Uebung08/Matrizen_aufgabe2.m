@@ -21,9 +21,9 @@ T_Scale=[1 0 0 0;
 	0 1 0 0;
 	0 0 3 0;
 	0 0 0 1];  
-T_Scher=[1 0 0.5 0;
-	2 1 0.5 0;
-	2 0 1 0;
+T_Scher=[1 2 2 0;
+	0 1 0 0;
+	0.5 0.5 1 0;
 	0 0 0 1];
 T_Proj=[0 0 0 0;
   0 0 0 0;
@@ -35,13 +35,11 @@ Cube = [0 1 1 0 0 1 1 0;
         1 1 1 1 1 1 1 1];
 
 %Transponiert ist Christians Werte
- T_ges=T_Rot*T_Scale*T_Scher'*T_T*T_Proj;
- %T_ges_Johannes=T_Rot*T_Scale*T_Scher*T_T*T_Proj;
+ T_ges=T_Rot*T_Scale*T_Scher*T_T*T_Proj;
 
  %Spalten sind die Eckpunkte des Würfels
  Res = (T_ges * Cube)';
- %Res_Johannes = (T_ges_Johannes * Cube)';
  
  %Output
- T_Rot
+ T_ges
  Res
