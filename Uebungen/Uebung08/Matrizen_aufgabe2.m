@@ -4,11 +4,7 @@ T_T=[ 1 0 0 0;
 	    0 1 0 2;
 	    0 0 1 0;
 	    0 0 0 1];    
-%Werte Christian mit Wiki-Formel
-T_Rot_values=[0.84 -0.19 0.151 0;
-  0.50 0.60 -0.62 0; 
-  -0.19 0.78 0.60 0;
-  0 0 0 1];
+
 %Wiki-Formel 
   n=[1 0.5 0.5];
   n=n/norm(n);
@@ -29,17 +25,21 @@ T_Proj=[0 0 0 0;
   0 0 0 0;
   0 0 1 0;
   0.5 2 0 1];
-Cube = [0 1 1 0 0 1 1 0;
+
+%Transponiert ist Christians Werte
+ T_ges=T_Rot*T_Scale*T_Scher*T_T*T_Proj;
+ T_ges_alternative=T_Proj*T_T*T_Scher*T_Scale*T_Rot;
+
+%Spalten sind die Eckpunkte des Würfels
+ Cube = [0 1 1 0 0 1 1 0;
         0 0 1 1 0 0 1 1;
         0 0 0 0 1 1 1 1;
         1 1 1 1 1 1 1 1];
 
-%Transponiert ist Christians Werte
- T_ges=T_Rot*T_Scale*T_Scher*T_T*T_Proj;
-
- %Spalten sind die Eckpunkte des Würfels
  Res = (T_ges * Cube)';
- 
- %Output
+ Res_alternative = (T_ges_alternative * Cube)';
+%Output
  T_ges
+ T_ges_alternative
  Res
+ Res_alternative
