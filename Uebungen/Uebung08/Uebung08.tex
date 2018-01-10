@@ -48,49 +48,60 @@
 \section{Aufgabe 2}
 \begin{frame}
 	\frametitle{Aufgabe 2: Transformationen}
-	$T_T=\begin{bmatrix}
+	Die Matrizen der Basistransformationen ergeben sich zu
+	$T_{Translation}=\begin{bmatrix}
 	1 & 0 & 0 & 0\\
 	0 & 1 & 0 & 2\\
 	0 & 0 & 1 & 0\\
 	0 & 0 & 0 & 1
 	\end{bmatrix} $, 
-	$T_{Rot}=\begin{bmatrix}
+	$T_{Rotation}=\begin{bmatrix}
 	0.90 & -0.19 & -0.19 & 0\\
 	0.39 & 0.76 & 0.63 & 0\\
 	-0.19 & -0.53 & 0.76 & 0\\
 	0 & 0 & 0 & 1
 	\end{bmatrix} $, 
-	$T_{Scale}=\begin{bmatrix}
+	$T_{Skalierung}=\begin{bmatrix}
 	1 & 0 & 0 & 0\\
 	0 & 1 & 0 & 0\\
 	0 & 0 & 3 & 0\\
 	0 & 0 & 0 & 1
 	\end{bmatrix} $, 
-	$T_{Scher}=\begin{bmatrix}
+	$T_{Scherung}=\begin{bmatrix}
 	1 & 0 & 0.5 & 0\\
 	2 & 1 & 0.5 & 0\\
 	2 & 0 & 1 & 0\\
 	0 & 0 & 0 & 1
 	\end{bmatrix} $,
-	 $T_{Proj}=\begin{bmatrix}
+	 $T_{Projektion}=\begin{bmatrix}
 	 0 & 0 & 0 & 0\\
 	 0 & 0 & 0 & 0\\
 	 0 & 0 & 1 & 0\\
 	 0.5 & 2 & 0 & 1
 	 \end{bmatrix} $\\
-	 
-	 Damit folgt für die Verkettung der einzuelnen Projektionen\\
-	 $T_{ges}=\begin{bmatrix}
-	 -0.19 & -0.76 & -0.22 & -0.38\\
-	  0.76 &  3.04 &  2.47 &  1.52\\
-	 -0.53 & -2.12 &  1.92 & -1.06\\
-	  0.50 &  2.00 &  0.00 &  1
-	 \end{bmatrix} $
+
 \end{frame}
 \begin{frame}
 	\frametitle{Aufgabe 2: Transformationen}
-	Damit ergeben sich die Positionen des Würfels zu
-	%TODO
+	Damit folgt für die Verkettung der einzuelnen Projektionen\\
+	$T_{ges}=T_{Projektion} \cdot T_{Scherung} \cdot T_{Skalierung} \cdot T_{Rotation} \cdot T_{Translation}$\\
+	$=\begin{bmatrix}
+	 &  &  & \\
+	 &  &  & \\
+	 &  &  & \\
+	 &  &  & 
+	\end{bmatrix}$\\
+	Damit ergeben sich die Positionen des Würfels zu\\
+	{\small 
+	$p_1=T_{ges} \cdot \begin{bmatrix} 0\\0\\0\end{bmatrix}= $,
+	$p_2=T_{ges} \cdot \begin{bmatrix} 1\\0\\0\end{bmatrix}= $,
+	$p_3=T_{ges} \cdot \begin{bmatrix} 1\\1\\0\end{bmatrix}= $,
+	$p_4=T_{ges} \cdot \begin{bmatrix} 0\\1\\0\end{bmatrix}= $,\\
+	$p_5=T_{ges} \cdot \begin{bmatrix} 0\\0\\1\end{bmatrix}= $,
+	$p_6=T_{ges} \cdot \begin{bmatrix} 1\\0\\1\end{bmatrix}= $,
+	$p_7=T_{ges} \cdot \begin{bmatrix} 1\\1\\1\end{bmatrix}= $,
+	$p_8=T_{ges} \cdot \begin{bmatrix} 0\\1\\1\end{bmatrix}= $.
+}
 	
 \end{frame}
 
