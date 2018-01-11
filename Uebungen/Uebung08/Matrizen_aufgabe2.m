@@ -12,7 +12,7 @@ T_Trans=[ 1 0 0 0;
 T_Rot=[(n(1))^2*(1-cos(a))+cos(a) , n(1)*n(2)*(1-cos(a))-n(3)*sin(a) , n(1)*n(3)*(1-cos(a))+n(2)*sin(a),0;
        n(1)*n(2)*(1-cos(a))+n(3)*sin(a) , (n(2))^2*(1-cos(a))+cos(a) , n(2)*n(3)*(1-cos(a))-n(1)*sin(a),0;
        n(1)*n(3)*(1-cos(a))-n(2)*sin(a) , n(2)*n(3)*(1-cos(a))+n(1)*sin(a) ,(n(3))^2*(1-cos(a))+cos(a),0;
-       0 0 0 1]; 
+       0 0 0 1];
 T_Scale=[1 0 0 0;
 	0 1 0 0;
 	0 0 3 0;
@@ -39,5 +39,7 @@ T_Proj=[0 0 0 0;
  Res = (T_ges * Cube)';
  Res_alternative = (T_ges_alternative * Cube)';
 %Output
+T_Rot
+T_ges_alternative
  Res
  Res_alternative
