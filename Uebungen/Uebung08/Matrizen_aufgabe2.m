@@ -1,6 +1,6 @@
 clc
 
-T_T=[ 1 0 0 0;
+T_Trans=[ 1 0 0 0;
 	    0 1 0 2;
 	    0 0 1 0;
 	    0 0 0 1];    
@@ -27,8 +27,8 @@ T_Proj=[0 0 0 0;
   0.5 2 0 1];
 
 %Transponiert ist Christians Werte
- T_ges=T_Rot*T_Scale*T_Scher*T_T*T_Proj;
- T_ges_alternative=T_Proj*T_T*T_Scher*T_Scale*T_Rot;
+ T_ges=T_Trans*T_Rot*T_Scale*T_Scher*T_Proj;
+ T_ges_alternative=T_Proj*T_Scher*T_Scale*T_Rot*T_Trans;
 
 %Spalten sind die Eckpunkte des Würfels
  Cube = [0 1 1 0 0 1 1 0;
@@ -39,7 +39,5 @@ T_Proj=[0 0 0 0;
  Res = (T_ges * Cube)';
  Res_alternative = (T_ges_alternative * Cube)';
 %Output
- T_ges
- T_ges_alternative
  Res
  Res_alternative
