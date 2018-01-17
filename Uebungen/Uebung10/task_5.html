@@ -1,0 +1,39 @@
+<!DOCTYPE html > 
+<html > 
+	<head> 
+		<link rel='stylesheet' type='text/css'
+			href='http://www.x3dom.org/x3dom/release/x3dom.css'>
+		<script type='text/javascript' 
+			src='http://www.x3dom.org/x3dom/release/x3dom.js'></script>
+	</head> 
+	<body>
+			<x3d width='400px' height='400px'>
+				<scene> 
+					<group>
+						<shape> 
+							<appearance> 
+								<material diffuseColor='0 1 0'></material>
+							</appearance>
+							<box></box> 
+						</shape> 
+						<transform translation='0 2 0' >
+							<group DEF='BLUE_CUBE'>
+								<shape>
+									<appearance> 
+										<material diffuseColor='0 0 1'></material>
+									</appearance>
+									<box></box> 
+								</shape>
+							</group>
+						</ transform >
+						<transform translation='2 -2 0' >
+							<group USE='BLUE_CUBE'></group>
+						</transform>
+						<transform translation='-2 -2 0' >
+							<group USE='BLUE_CUBE'></group>
+						</transform>
+					</group>
+				</scene> 
+			</x3d> 
+		</body> 
+	</html>

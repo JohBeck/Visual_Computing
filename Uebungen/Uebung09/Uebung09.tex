@@ -26,8 +26,7 @@
 \section{Aufgabe 1}
 	\begin{frame}
 		\frametitle{Aufgabe 1: 3D-Daten}
-		%TODO: Nennen und beschreiben Sie zwei Beispiele für die Anwendung von 3D-Daten, welche nicht in der Vorlesung vorgestellt wurden.
-3D-Daten können nicht nur Gewonnen, sondern auch genutzt werden, um dinge dar- oder herzustellem. Beispiele hierfür wären 3D Drucker oder CAD Software.
+		3D-Daten können nicht nur Gewonnen, sondern auch genutzt werden, um Dinge dar- oder herzustellen. Beispiele hierfür wären 3D Drucker oder CAD Software.
 		
 	\end{frame}
 
@@ -35,22 +34,26 @@
 \begin{frame}
 	\frametitle{Aufgabe 2: Volumenvisualisierung}
 			\begin{itemize}
-		\item[a)] %TODO: Betrachten Sie folgende zwei Bilder:[Abbildung1] [Abbildung2]. Geben Sie für diese an, bei welchem direkte und bei welchem indirekte Volumenvisualisierung verwendet wurde. Wie funktionieren jeweils die beiden Methoden?
-		
-		\item[b)] %TODO: Wie können sehr große Oberflächennetze effektiv gerendert werden? Welche beiden Methoden werden dabei häufig angewendet und wieso?
+			\item[a)]
+			Abbildung 1: Direkte Volumenvisualisierung \\
+			Abbildung 2: Indirekte Volumenvisualisierung \\
+			\textbf{Direkte Volumenvisualisierung:} Die Visualisierung des 3D-Objekts funktioniert ohne die Generierung einer Metadarstellung. Hierfür wird die Emission und Absoption bei durchschicken eines Strahls durch das Objekt betrachtet. \\
+			\textbf{Indirekte Volumenvisualisierung:} Es wird zunächst eine Zwischendarstellung des Volumens generiert. Hierfür können zB. mithilfe des Marching-Cubes Algorithmus Isoflächen erzeugt werden, aus welchen später die Visualisierung des Objekts erfolgt.
+			\item[b)]
+			Bei sehr großen Oberflächen bietet es sich an unsichtbare Polygone zu entfernen und die Gesamtanzahl der Polygone zu verringern. Die hierfür verwendeten Methoden sind das Culling und die Meshreduktion.
 	\end{itemize}
 \end{frame}
 \begin{frame}
 	\frametitle{Aufgabe 2: Volumenvisualisierung}
 	\begin{itemize}
-		\item[c)] %Nennen Sie die drei in der Vorlesung vorgestellten Arten von Culling und beschreiben Sie sie!
+		\item[c)]
 			\begin{itemize}
-				\item Backface-Culling: Polygone, bei denen lediglich die Rückseiten sichtbar sind (Polygonnormale zeigen vom Sichtpunkt werg), werden nicht gezeichnet. \\
-				\item View-Frustum-Culling: PÜolygone, welche zum teil oder vollständig außerhalb des View-Frustums liegen werden nur zum Teil oder überhaupt nicht gezeichnet.\\
-				\item Occlusion-Culling:Polygone werden nach Tiefe sortiert und nur gerendert wenn sie unter beachtung der Transparenz der überliegenden Polygone nicht vollständig verdeckt sind.\\
+			\item Backface-Culling: Polygone, bei denen lediglich die Rückseiten sichtbar sind (Polygonnormale zeigen vom Sichtpunkt werg), werden nicht gezeichnet. \\
+			\item View-Frustum-Culling: PÜolygone, welche zum teil oder vollständig außerhalb des View-Frustums liegen werden nur zum Teil oder überhaupt nicht gezeichnet.\\
+			\item Occlusion-Culling:Polygone werden nach Tiefe sortiert und nur gerendert wenn sie unter beachtung der Transparenz der überliegenden Polygone nicht vollständig verdeckt sind.\\
 			\end{itemize}
 		
-		\item[d)] %TODO: Was wird bei der Polygon-Repräsentation von Isoflächen gemacht?
+		\item[d)] Es wird ein Mesh berechnet, der die Oberfläche repräsentiert.
 	\end{itemize}
 \end{frame}
 
@@ -58,8 +61,8 @@
 \begin{frame}
 	\frametitle{Aufgabe 3: Voronoi-Diagramme}
 	\begin{itemize}
-	\item[a)] %Wenden Sie die Delaunay-Triangulation grafisch auf das folgende Diagramm an.
-	Die Delauney-Triaangulierung des angegebenen Diagramms ist in Abbildung \ref{DelTri} abgebildet. Wie man sehen kann enthält der Umkreis eines jeden Dreiecks lediglich die eigenen Punkte und keine Weiteren. Somit liegt eine korrekte Delauney-Triangulierung vor.
+	\item[a)]
+	Die Delauney-Triangulierung des angegebenen Diagramms ist in Abbildung \ref{DelTri} abgebildet. Wie man sehen kann enthält der Umkreis eines jeden Dreiecks lediglich die eigenen Punkte und keine Weiteren. Somit liegt eine korrekte Delauney-Triangulierung vor.
 	\begin{figure}
 		\includegraphics[width = .5\linewidth]{task_3a.png}
 		\caption{Delauney-Triangulierung des gegebenen Diagramms}
@@ -70,7 +73,7 @@
 \begin{frame}
 	\frametitle{Aufgabe 3: Voronoi-Diagramme}
 	\begin{itemize}
-	\item[b)] %Wann muss Edge-Flipping bei der Erstellung einer Delaunay-Triangulation durchgeführt werden? Wie funktioniert es und welche Eigenschaften haben die Dreiecke danach?
+	\item[b)]
 	Bei der Erstellung einer Delauney-Triangulierung muss Edge-Flipping angewendet werden, wenn der Umkreis eines Dreiecks einen Punkt eines anderen Dreiecks einschließt. Da dies nicht zulässig ist, wird die gemeinsame Kante der beiden Dreiecke gelöst und die beiden anderen Punkte verbunden. Diesen Vorgang nennt man Edge-Flipping. Ist lediglich eine Punktmenge als ausgangspunkt gegeben, kann diese zu beliebigen Dreiecken(ohne Kantenüberschneidung)  verbunden werden, welche dann mittels Edge-Flipping an Fehlerhaften Stellen in eine Delauney-Triangulierung überführt werden kann. 
 	\end{itemize} 
 \end{frame}
@@ -79,15 +82,15 @@
 \begin{frame}
 	\frametitle{Aufgabe 4: Volume Rendering und Marching Cubes}
 	\begin{itemize}
-	\item[a)] %TODO: Beschreiben Sie die Faktoren, die die Laufzeit des jeweiligen Algorithmus maßgeblich beeinflussen.
+	\item[a)]
 		\begin{itemize}
-			\item Marching-Cubes: \\
-			\item Ray-Casting: 
+			\item Marching-Cubes: Die Anzahl zu berechnender Polygone \\
+			\item Ray-Casting: Anzahl der Voxel und der Auflösung der Anzeigefläche
 		\end{itemize}
 	\item[b)] %TODO: Nennen Sie einen Vor- und einen Nachteil von Volume Rendering gegenüber Marching Cubes.
 	\begin{itemize}
-		\item Vorteil: \\
-		\item Nachteil: 
+		\item Vorteil: Das Rendern der kompletten Daten erhält Informationen, welche beim Rendern der lediglich sichtbaren Oberfläche verloren gehen. \\
+		\item Nachteil: Da beim Volume Rendering nicht nur die Sichtbare Oberfläche gerendert wird wie beim Marching Cubes Algorithmus entsteht ein höherer Berechnungsaufwand.
 	\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -96,18 +99,11 @@
 \begin{frame}
 	\frametitle{Aufgabe 5: Marching Squares}
 	\begin{itemize}
-		\item[a)] %TODO: Was wird das Ergebnis der Anwendung der Marching Squares auf dieses Feld für einen gegeben	Isowert sein?
-		
-	\end{itemize}
-\end{frame}
-\begin{frame}
-	\frametitle{Aufgabe 5: Marching Squares}
-	\begin{itemize}
-		\item[b)] %Wenden Sie den Marching Squares Algorithmus auf folgendes Feld an. Innerhalb der Isofläche sollen Werte liegen, die größer oder gleich 31 sind.
-		Die Abbildung zeigt die Anwendung des Marching Squares Algorithmus mit Isowert auf das vorgegebene Feld. Die Werte innerhalb des Isofläche wurden grau hinterlegt, sowie die Umrandung in schwarz eingefügt.
+		\item[a)] Es wird die Isolinie für den gegebenen Isowert berechnet, sie verbindet Datenpunkte mit gleichen Werten.
+		\item[b)]
+		Die Abbildung zeigt die Anwendung des Marching Squares Algorithmus mit Isowert 31 auf das vorgegebene Feld. Die Werte innerhalb des Isofläche wurden grau hinterlegt, sowie deren Umrandung in schwarz eingefügt.
 		\begin{figure}
 			\includegraphics[width = .4\linewidth]{task_5b.png}
-			\caption{Anwendung des Marching Squares Algorithmus uaf das gegebene Feld mit Isowert 31}
 			\label{MaSq}
 		\end{figure}
 	\end{itemize}
