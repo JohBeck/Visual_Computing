@@ -43,13 +43,19 @@
 \begin{frame}
 	\frametitle{Aufgabe 2: X3D-Dokument}
 	%Wie ist es möglich, in einem X3D-Dokument bestimmte Elemente mehrfach zu zeichnen, ohne diese mehrfach zu definieren?
-	in einem X3D-Dokument ist es möglich bestimmte Elemente mehrfach zu zeichen, ohne sie mehrfach zu definieren, indem man innerhalb einer Gruppierung mehreree Transformationen einfügt, welche alle auf dieselben Objektdaten verweisen.
+	In einem X3D-Dokument ist es möglich bestimmte Elemente mehrfach zu zeichen, ohne sie mehrfach zu definieren, indem man innerhalb einer Gruppierung mehrere Transformationen einfügt, welche alle auf dieselben Objektdaten verweisen. So existiert ein Objekt, z.B. ein Rad nur einmalig, und es wird über 4 verschiedene Transformationen an den Achsen des Autos dargestellt.
 \end{frame}
 
 \section{Aufgabe 3}
 \begin{frame}
 	\frametitle{Aufgabe 3: Szenengraph-Standards}
 	%TODO:Welche bekannten Szenengraph-Standards gibt es noch neben X3DOM? Nennen Sie mind. zwei und beschreiben Sie diese kurz.
+	% Quelle: Skript und Wikipedia
+			\begin{itemize}
+			\item PHIGS oder Programmer’s Hierarchical Interactive Graphics System - Ist bis heute der ISO standart 9592 für Computergrafik. Es unterstützt unter anderem Punkte, Linien, gefüllte Polygone Transformationen, Perspektiven und Ebenen.
+			\item VRML - Erstes Konzept für VR im Web und ist stark an OpenInventor angelehnt, ist aber deklarativ. Beherrscht 3D Geometrien, Ausleuchtung, Animation und Interaktion. Wird in Echtzeit generiert somit fallen Spiegelungen und Schattenwurf aus.
+			\item X3D - Extensible 3D basiert auf XML und ist der Nachfolger des VRML - Standards. Es erlaubt neben XML auch Binary XML und VRML und bietet Profile für weitere Anwendugsfälle. Wird vom WWW Consortium empfohlen.
+		\end{itemize}
 \end{frame}
 
 \section{Aufgabe 4}
