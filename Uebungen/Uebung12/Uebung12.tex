@@ -46,16 +46,26 @@
 		\frametitle{Aufgabe 2: Farbräume}
 		% Rechnen Sie (17, 36, 28) aus dem 24-Bit-RGB-Farbraum in den HSV-Farbraum um. Runden Sie die Zwischenergebnisse sowie das Endergebnis auf 4 Nachkommastellen. Was drücken die einzelnen Werte jeweils aus?
 			\begin{enumerate}
-			\item RGB normieren, dass alle Werte zwischen 0 und 1 liegen
-			$\Rightarrow RGB_{norm} = (R, G, B) = (0.0667, 0.1412, 0.1098)$
-			\item $MAX = max(R, G, B) = G = 0.1412 \; ; \; MIN = min(R, G, B) = R = 0.0667$
+			\item Zunächst müssen die RGB Werte normiert werden. $ RGB_{norm} =
+			\begin{bmatrix}
+				R&G&B
+			\end{bmatrix}^T \stackrel{!}{\in} [0,1]^3$
+			$\Rightarrow RGB_{norm} = \frac{RGB_{24bit}}{255} = \begin{bmatrix}
+			0.0667&0.1412&0.1098
+			\end{bmatrix}^T$
+			\item Anschließend werden der größte und der kleinste Wert ermittelt. $MAX = max(R, G, B) = G = 0.1412; MIN = min(R, G, B) = R = 0.0667$
 			\item  $H = 60 ^{\circ} \cdot (2 + \frac{B-R}{MAX-MIN}) = 154.7368^{\circ}$
-			\item  B beschreibt den Farbwert(hue) und stellt den Farbwinkel auf dem Farbkreis dar.
-			\item S = (MAX-MIN)/MAX = 0.5278
-			\item S bechreibt die Farbsättigung(saturation) und gibt einen prozentualen Verlauf an, wobei 0\% ein Neutralgrau bezeichnet und 100\% die gesättigte, reine Farbe darstellt \
-			\item V = MAX = G = 0.1412
-			\item V beschreibt den Hellwert (value) der Farbe. Auch er wird prozentual angegeben, wobei 0\% keiner Helligkeit und 100\% voller Helligkeit entspricht
-			\item $HSV = (154.7368^{\circ}, 52.78\%, 14.12\%)$
+			\item  H beschreibt den Farbwert(hue) und stellt den Farbwinkel auf dem Farbkreis dar.
+			\end{enumerate}
+		\end{frame}
+		\begin{frame}
+			\frametitle{Aufgabe 2: Farbräume (2)}
+			\begin{enumerate}
+				\item $S = \frac{(MAX-MIN)}{MAX} = 0.5278$
+				\item S bechreibt die Farbsättigung(saturation) und gibt einen prozentualen Verlauf an, wobei 0\% ein Neutralgrau bezeichnet und 100\% die gesättigte, reine Farbe darstellt \
+				\item $V = MAX = G = 0.1412$
+				\item V beschreibt den Hellwert (value) der Farbe. Auch er wird prozentual angegeben, wobei 0\% keiner Helligkeit und 100\% voller Helligkeit entspricht
+				\item $HSV = \begin{bmatrix}154.7368^{\circ}, 52.78\%, 14.12\%\end{bmatrix}$
 			\end{enumerate}
 		\end{frame}
 
